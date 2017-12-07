@@ -1,0 +1,4162 @@
+{
+   "time" : {
+      "to" : "now",
+      "from" : "now-6h"
+   },
+   "rows" : [
+      {
+         "panels" : [
+            {
+               "scroll" : false,
+               "maxDataPoints" : "auto",
+               "error" : false,
+               "id" : 39,
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.disk_busy, $TopResources), 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "transform" : "timeseries_aggregations",
+               "fontSize" : "100%",
+               "styles" : [
+                  {
+                     "pattern" : "Time",
+                     "type" : "date",
+                     "dateFormat" : "YYYY-MM-DD HH:mm:ss"
+                  },
+                  {
+                     "colorMode" : "row",
+                     "unit" : "percent",
+                     "pattern" : "/.*/",
+                     "type" : "number",
+                     "thresholds" : [
+                        "60",
+                        "80"
+                     ],
+                     "decimals" : 0,
+                     "colors" : [
+                        "rgba(71, 212, 59, 0.4)",
+                        "rgba(245, 150, 40, 0.73)",
+                        "rgba(225, 40, 40, 0.59)"
+                     ]
+                  }
+               ],
+               "isNew" : true,
+               "pageSize" : 5,
+               "showHeader" : true,
+               "sort" : {
+                  "desc" : true,
+                  "col" : 1
+               },
+               "editable" : true,
+               "columns" : [
+                  {
+                     "value" : "avg",
+                     "text" : "Avg"
+                  }
+               ],
+               "type" : "table",
+               "span" : 4,
+               "title" : "Disk Utilization"
+            },
+            {
+               "scroll" : false,
+               "maxDataPoints" : "auto",
+               "error" : false,
+               "id" : 99,
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.total_transfers, $TopResources), 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "B"
+                  }
+               ],
+               "transform" : "timeseries_aggregations",
+               "fontSize" : "100%",
+               "styles" : [
+                  {
+                     "pattern" : "Time",
+                     "type" : "date",
+                     "dateFormat" : "YYYY-MM-DD HH:mm:ss"
+                  },
+                  {
+                     "colorMode" : null,
+                     "unit" : "none",
+                     "pattern" : "/.*/",
+                     "type" : "number",
+                     "thresholds" : [
+                        ""
+                     ],
+                     "decimals" : 0,
+                     "colors" : [
+                        "rgba(71, 212, 59, 0.4)",
+                        "rgba(245, 150, 40, 0.73)",
+                        "rgba(225, 40, 40, 0.59)"
+                     ]
+                  }
+               ],
+               "isNew" : true,
+               "pageSize" : 5,
+               "showHeader" : true,
+               "sort" : {
+                  "desc" : true,
+                  "col" : 1
+               },
+               "editable" : true,
+               "columns" : [
+                  {
+                     "value" : "avg",
+                     "text" : "Avg"
+                  }
+               ],
+               "type" : "table",
+               "span" : 4,
+               "title" : "IOPs per Disk"
+            },
+            {
+               "scroll" : false,
+               "maxDataPoints" : "auto",
+               "error" : false,
+               "id" : 100,
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestMax(netapp.capacity.$Group.$Cluster.node.$Node.aggr.$Aggregate.size_used_percent, $TopResources), 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "transform" : "timeseries_aggregations",
+               "fontSize" : "100%",
+               "styles" : [
+                  {
+                     "pattern" : "Time",
+                     "type" : "date",
+                     "dateFormat" : "YYYY-MM-DD HH:mm:ss"
+                  },
+                  {
+                     "colorMode" : "row",
+                     "unit" : "percent",
+                     "pattern" : "/.*/",
+                     "type" : "number",
+                     "thresholds" : [
+                        "75",
+                        "85"
+                     ],
+                     "decimals" : 0,
+                     "colors" : [
+                        "rgba(71, 212, 59, 0.4)",
+                        "rgba(245, 150, 40, 0.73)",
+                        "rgba(225, 40, 40, 0.59)"
+                     ]
+                  }
+               ],
+               "isNew" : true,
+               "pageSize" : 5,
+               "showHeader" : true,
+               "sort" : {
+                  "desc" : true,
+                  "col" : 1
+               },
+               "editable" : true,
+               "columns" : [
+                  {
+                     "value" : "avg",
+                     "text" : "Avg"
+                  }
+               ],
+               "type" : "table",
+               "span" : 4,
+               "title" : "Aggr Capacity Used"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 1,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Disk Utilization",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 0,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.disk_busy, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "percent",
+                     "min" : 0,
+                     "max" : 100,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : 60,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : 80,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "height" : "",
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 16,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "IOPs per Disk",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.total_transfers, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "height" : "",
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : false,
+         "title" : "Highlights",
+         "height" : "302px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 22,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "User Reads per Disk",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.user_reads, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 36,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "User Read IOP Size",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(scale(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.user_read_chain, $TopResources), 4), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "KB",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 24,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "User Read Latency per 4KB IO",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.user_read_latency, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 2,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "User Writes per Disk",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.user_writes, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 37,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "User Write IOP Size",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(scale(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.user_write_chain, $TopResources), 4), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "KB",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 6,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "User Write Latency per 4KB IO",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.user_write_latency, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 17,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "CP Reads per Disk",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.cp_reads, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 38,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "CP Read IOP Size",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(scale(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.cp_read_chain, $TopResources), 4), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "KB",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 7,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "CP Read Latency per 4KB IO",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.cp_read_latency, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Disk IOP Type Drilldown",
+         "height" : "302px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 91,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Adapter Read Data",
+               "span" : 6,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.hostadapter.*.bytes_read, $TopResources), 5, 7)",
+                     "textEditor" : false,
+                     "hide" : false,
+                     "refId" : "B"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "thresholdLine" : false,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "MB/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 92,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Adapter Write Data",
+               "span" : 6,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.hostadapter.*.bytes_written, $TopResources), 5, 7)",
+                     "textEditor" : false,
+                     "hide" : false,
+                     "refId" : "B"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "thresholdLine" : false,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "MB/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Disk and Tape Adapter Drilldown",
+         "height" : "250px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 21,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Capacity Used Percent",
+               "span" : 3,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 0,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.capacity.$Group.$Cluster.node.$Node.aggr.$Aggregate.size_used_percent, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : 75,
+                  "thresholdLine" : false,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : 85,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "percent",
+                     "min" : 0,
+                     "max" : 100,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 3,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "hideEmpty" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Capacity Used",
+               "span" : 3,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 0,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.capacity.$Group.$Cluster.node.$Node.aggr.$Aggregate.size_used, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "GB",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 4,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Capacity Free",
+               "span" : 3,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 0,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.capacity.$Group.$Cluster.node.$Node.aggr.$Aggregate.size_available, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "GB",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 73,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "hideEmpty" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Capacity Committed",
+               "span" : 3,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 0,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.capacity.$Group.$Cluster.node.$Node.aggr.$Aggregate.space_total_committed, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "GB",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 25,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Compression Savings",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 0,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.capacity.$Group.$Cluster.node.$Node.aggr.$Aggregate.compression_space_savings, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "GB",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 5,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Dedupe Savings",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 0,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.capacity.$Group.$Cluster.node.$Node.aggr.$Aggregate.dedupe_space_savings, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "GB",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 26,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Snapshot Reserved Capacity",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 0,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.capacity.$Group.$Cluster.node.$Node.aggr.$Aggregate.snapshot_reserve_used, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "GB",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Storage Capacity Drilldown",
+         "height" : "302px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 82,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "percentage" : false,
+               "aliasColors" : {},
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Volume Read Latency",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.vol_summary.read_latency, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "height" : "",
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 84,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "percentage" : false,
+               "aliasColors" : {},
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Volume Read Data",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : null,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.vol_summary.read_data, $TopResources), 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "MB/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "height" : "",
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 85,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "percentage" : false,
+               "aliasColors" : {},
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Volume Read IOPs",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : null,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.vol_summary.read_ops, $TopResources), 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "IOPs",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "height" : "",
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 86,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "percentage" : false,
+               "aliasColors" : {},
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Volume Write Latency",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.vol_summary.write_latency, $TopResources), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "height" : "",
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 87,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "percentage" : false,
+               "aliasColors" : {},
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Volume Write Data",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : null,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.vol_summary.write_data, $TopResources), 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "MB/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "height" : "",
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 88,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "percentage" : false,
+               "aliasColors" : {},
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Volume Write IOPs",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : null,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.vol_summary.write_ops, $TopResources), 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "IOPs",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "height" : "",
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Volume Summary Drilldown",
+         "height" : "302px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 23,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : true,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "IOPs per Type",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 10,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByMetric(sortByMaxima(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.{cp_reads,user_writes,user_reads}))",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "IOPs",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 1,
+               "editable" : true,
+               "nullPointMode" : "null as zero"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 20,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : true,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Percent IOPs per Type",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 10,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(asPercent(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.{cp_reads,user_writes,user_reads})), 8)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "percent",
+                     "min" : 0,
+                     "max" : 100,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 1,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 34,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [
+                  {
+                     "alias" : "Write KB/s",
+                     "yaxis" : 1
+                  }
+               ],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Disk IOP Size",
+               "span" : 6,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "alias(scale(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.user_read_chain, 4), 'User Read IO Size')",
+                     "hide" : false,
+                     "refId" : "A"
+                  },
+                  {
+                     "target" : "alias(scale(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.user_write_chain, 4), 'User Write IO Size')",
+                     "hide" : false,
+                     "refId" : "B"
+                  },
+                  {
+                     "target" : "alias(scale(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.cp_read_chain, 4), 'CP Read IO Size')",
+                     "hide" : false,
+                     "refId" : "C"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "KB",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 75,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Disk Read Latency per IOP",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "alias(groupByNode(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.{user_read_latency,user_read_chain}, 7, 'multiplySeries'), 'Read Latency')",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 18,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Disk Layout: Writes",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 0,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "multiplySeries(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.cp_reads, netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.cp_read_chain)",
+                     "textEditor" : true,
+                     "hide" : true,
+                     "refId" : "C"
+                  },
+                  {
+                     "target" : "multiplySeries(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.user_writes, netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.user_write_chain)",
+                     "textEditor" : true,
+                     "hide" : true,
+                     "refId" : "D"
+                  },
+                  {
+                     "target" : "alias(divideSeries(#C, #D), 'HDD Parity Read / Write Blocks')",
+                     "textEditor" : false,
+                     "hide" : false,
+                     "refId" : "E"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : 0,
+                     "max" : 2,
+                     "label" : "HDD Parity Read / Write Blocks",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : 0.5,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : 0.75,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 19,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [
+                  {
+                     "alias" : "Write KB/s",
+                     "yaxis" : 1
+                  }
+               ],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Disk Layout: Reads",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "alias(scale(divideSeries(netapp.perf.$Group.$Cluster.node.$Node.vol_summary.read_data, netapp.perf.$Group.$Cluster.node.$Node.vol_summary.read_ops), 1024),'Host Read IO Size')",
+                     "hide" : false,
+                     "refId" : "A"
+                  },
+                  {
+                     "target" : "alias(scale(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.user_read_chain, 4), 'Disk Read IO Size')",
+                     "hide" : false,
+                     "refId" : "B"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "KB",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 76,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Disk Busy per RAID Group",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.node.$Node.aggr.$Aggregate.*.*.disk_busy, $TopResources), 8, 9)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "percent",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Per Aggregate Drilldown (Must Select Cluster/Node/Aggregate)",
+         "height" : "250px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "bars" : false,
+               "points" : false,
+               "steppedLine" : false,
+               "lines" : true,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "id" : 29,
+               "renderer" : "flot",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.read_ops_replaced_percent, 'SSD Hit %')",
+                     "hide" : false,
+                     "refId" : "A"
+                  },
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.read_ops_replaced, 'HDD Reads Replaced')",
+                     "hide" : false,
+                     "refId" : "B"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "percent",
+                     "min" : 0,
+                     "max" : 100,
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "datasource" : null,
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [
+                  {
+                     "bars" : true,
+                     "lines" : false,
+                     "alias" : "HDD Reads Replaced",
+                     "yaxis" : 2
+                  }
+               ],
+               "linewidth" : 2,
+               "editable" : true,
+               "type" : "graph",
+               "title" : "Flash Pool Activity",
+               "span" : 4,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "bars" : false,
+               "points" : false,
+               "steppedLine" : false,
+               "lines" : true,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "id" : 30,
+               "renderer" : "flot",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.hya_read_hit_latency_average, 'Avg Hit Latency (SSD)')",
+                     "hide" : false,
+                     "refId" : "A"
+                  },
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.hya_read_miss_latency_average, 'Avg Miss Latency (HDD)')",
+                     "hide" : false,
+                     "refId" : "B"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "datasource" : null,
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "linewidth" : 2,
+               "editable" : true,
+               "type" : "graph",
+               "title" : "SSD and HDD Latency",
+               "span" : 4,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "bars" : false,
+               "points" : false,
+               "steppedLine" : false,
+               "lines" : true,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 10,
+               "error" : false,
+               "id" : 33,
+               "renderer" : "flot",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "alias(scale(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.ssd_read_cached, 0.0009765625), 'Read Cached (GB)')",
+                     "hide" : false,
+                     "refId" : "A"
+                  },
+                  {
+                     "target" : "alias(scale(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.ssd_write_cached, 0.0009765625), 'Write Cached (GB)')",
+                     "hide" : false,
+                     "refId" : "B"
+                  },
+                  {
+                     "target" : "alias(scale(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.ssd_total, 0.0009765625), 'SSD Cache Total (GB)')",
+                     "hide" : false,
+                     "refId" : "C"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "GB",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {
+                  "SSD Cache Total (GB)" : "#BF1B00"
+               },
+               "percentage" : false,
+               "datasource" : null,
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [
+                  {
+                     "fill" : 0,
+                     "linewidth" : 6,
+                     "alias" : "SSD Cache Total (GB)"
+                  }
+               ],
+               "linewidth" : 2,
+               "editable" : true,
+               "type" : "graph",
+               "title" : "Flash Pool Capacity Used",
+               "span" : 4,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "bars" : false,
+               "points" : false,
+               "steppedLine" : false,
+               "lines" : true,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "id" : 32,
+               "renderer" : "flot",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.read_cache_ins_rate, 'Read Cache Insert Rate')",
+                     "hide" : false,
+                     "refId" : "A"
+                  },
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.wc_write_blks_total, 'Write Cache Insert Rate')",
+                     "hide" : false,
+                     "refId" : "B"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "Blocks / sec",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "datasource" : null,
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "linewidth" : 2,
+               "editable" : true,
+               "type" : "graph",
+               "title" : "Cache Inserts",
+               "span" : 4,
+               "nullPointMode" : "null as zero"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "bars" : false,
+               "points" : false,
+               "steppedLine" : false,
+               "lines" : true,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "id" : 31,
+               "renderer" : "flot",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.evict_destage_rate, 'Blocks Destaged')",
+                     "hide" : false,
+                     "refId" : "A"
+                  },
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.evict_remove_rate, 'Blocks Evicted')",
+                     "hide" : false,
+                     "refId" : "B"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "Blocks / sec",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "datasource" : null,
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "linewidth" : 2,
+               "editable" : true,
+               "type" : "graph",
+               "title" : "Cache Removals",
+               "span" : 4,
+               "nullPointMode" : "null as zero"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "bars" : false,
+               "points" : false,
+               "steppedLine" : false,
+               "lines" : true,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 0,
+               "error" : false,
+               "id" : 74,
+               "renderer" : "flot",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.awa_read_ops_replaced_percent, 'Read IOPs Replaced')",
+                     "hide" : false,
+                     "refId" : "A"
+                  },
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.awa_write_blks_replaced_percent, 'Write IOPs Replaced')",
+                     "hide" : false,
+                     "refId" : "B"
+                  },
+                  {
+                     "target" : "alias(scale(netapp.perf.$Group.$Cluster.node.$Node.flashpool.$Aggregate.awa_ssd_total, 0.0009765625), 'Recommended Cache Size (GB)')",
+                     "hide" : false,
+                     "refId" : "C"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "GB Cache Size",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "percent",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "thresholdLine" : false,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "datasource" : null,
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [
+                  {
+                     "fill" : 5,
+                     "alias" : "Recommended Cache Size (GB)",
+                     "yaxis" : 1
+                  },
+                  {
+                     "alias" : "Read IOPs Replaced",
+                     "yaxis" : 2
+                  },
+                  {
+                     "alias" : "Write IOPs Replaced",
+                     "yaxis" : 2
+                  }
+               ],
+               "linewidth" : 2,
+               "editable" : true,
+               "type" : "graph",
+               "title" : "AWA Recommended Cache Size and IOPs Replaced",
+               "span" : 4,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Per Flash Pool Drilldown (Must Select Cluster/Node/Aggregate)",
+         "height" : "250px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "bars" : false,
+               "points" : false,
+               "steppedLine" : false,
+               "lines" : true,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "id" : 42,
+               "renderer" : "flot",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashcache.*.hit_percent, 'Hit (%)')",
+                     "hide" : false,
+                     "refId" : "A"
+                  },
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashcache.*.disk_reads_replaced, 'HDD Reads Replaced')",
+                     "hide" : false,
+                     "refId" : "B"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "percent",
+                     "min" : 0,
+                     "max" : 100,
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "datasource" : null,
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [
+                  {
+                     "fill" : 5,
+                     "linewidth" : 0,
+                     "alias" : "HDD Reads Replaced",
+                     "yaxis" : 2
+                  }
+               ],
+               "linewidth" : 2,
+               "editable" : true,
+               "type" : "graph",
+               "title" : "Flash Cache Activity",
+               "span" : 4,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "bars" : false,
+               "points" : false,
+               "steppedLine" : false,
+               "lines" : true,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "id" : 44,
+               "renderer" : "flot",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashcache.ec0.inserts, 'Cache Insert Rate')",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "Blocks / sec",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "datasource" : null,
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "linewidth" : 2,
+               "editable" : true,
+               "type" : "graph",
+               "title" : "Cache Inserts",
+               "span" : 4,
+               "nullPointMode" : "null as zero"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "bars" : false,
+               "points" : false,
+               "steppedLine" : false,
+               "lines" : true,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "id" : 46,
+               "renderer" : "flot",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "aliasByMetric(netapp.perf.$Group.$Cluster.node.$Node.flashcache.ec0.{hit_directory,hit_indirect,hit_metadata_file,hit_normal_lev0})",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "Blocks / sec",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "datasource" : null,
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "linewidth" : 2,
+               "editable" : true,
+               "type" : "graph",
+               "title" : "Cache Hit by Type",
+               "span" : 4,
+               "nullPointMode" : "null as zero"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "bars" : false,
+               "points" : false,
+               "steppedLine" : false,
+               "lines" : true,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "id" : 43,
+               "renderer" : "flot",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashcache.*.usage, 'Used (%)')",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "percent",
+                     "min" : 0,
+                     "max" : 100,
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "datasource" : null,
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [
+                  {
+                     "bars" : true,
+                     "lines" : false,
+                     "alias" : "HDD Reads Replaced",
+                     "yaxis" : 2
+                  }
+               ],
+               "linewidth" : 2,
+               "editable" : true,
+               "type" : "graph",
+               "title" : "Flash Cache Capacity Percent Used",
+               "span" : 4,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "bars" : false,
+               "points" : false,
+               "steppedLine" : false,
+               "lines" : true,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "id" : 45,
+               "renderer" : "flot",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashcache.ec0.evicts, 'Cache Eviction Rate')",
+                     "hide" : false,
+                     "refId" : "A"
+                  },
+                  {
+                     "target" : "alias(netapp.perf.$Group.$Cluster.node.$Node.flashcache.ec0.invalidates, 'Cache Invalidate Rate')",
+                     "hide" : false,
+                     "refId" : "B"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "Blocks / sec",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "datasource" : null,
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "linewidth" : 2,
+               "editable" : true,
+               "type" : "graph",
+               "title" : "Cache Removals",
+               "span" : 4,
+               "nullPointMode" : "null as zero"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "bars" : false,
+               "points" : false,
+               "steppedLine" : false,
+               "lines" : true,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "id" : 47,
+               "renderer" : "flot",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "aliasByMetric(netapp.perf.$Group.$Cluster.node.$Node.flashcache.ec0.miss_*)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "Blocks / sec",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "stack" : false,
+               "legend" : {
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "datasource" : null,
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "linewidth" : 2,
+               "editable" : true,
+               "type" : "graph",
+               "title" : "Cache Miss by Type",
+               "span" : 4,
+               "nullPointMode" : "null as zero"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Per Flash Cache Drilldown (Must select Cluster/Node)",
+         "height" : "302px",
+         "showTitle" : true
+      }
+   ],
+   "timepicker" : {
+      "enable" : true,
+      "status" : "Stable",
+      "refresh_intervals" : [
+         "1m",
+         "5m",
+         "15m",
+         "30m",
+         "1h",
+         "2h",
+         "1d"
+      ],
+      "time_options" : [
+         "15m",
+         "1h",
+         "6h",
+         "12h",
+         "24h",
+         "2d",
+         "7d",
+         "30d",
+         "180d",
+         "1y",
+         "2y"
+      ],
+      "notice" : false,
+      "now" : true,
+      "collapse" : false,
+      "type" : "timepicker"
+   },
+   "refresh" : false,
+   "hideControls" : false,
+   "id" : 22,
+   "links" : [
+      {
+         "icon" : "external link",
+         "includeVars" : true,
+         "type" : "dashboards",
+         "title" : "Related Dashboards",
+         "keepTime" : true,
+         "tags" : [
+            "NetAppHarvest"
+         ],
+         "asDropdown" : true
+      }
+   ],
+   "timezone" : "browser",
+   "version" : 6,
+   "style" : "dark",
+   "templating" : {
+      "enable" : true,
+      "list" : [
+         {
+            "includeAll" : false,
+            "refresh_on_load" : false,
+            "query" : "netapp.perf.*",
+            "name" : "Group",
+            "datasource" : null,
+            "allFormat" : "glob",
+            "refresh" : 1,
+            "regex" : "",
+            "hide" : 0,
+            "type" : "query"
+         },
+         {
+            "includeAll" : true,
+            "refresh_on_load" : false,
+            "query" : "netapp.perf.$Group.*",
+            "name" : "Cluster",
+            "datasource" : null,
+            "allFormat" : "wildcard",
+            "refresh" : 1,
+            "hide" : 0,
+            "type" : "query",
+            "multi" : true,
+            "multiFormat" : "glob"
+         },
+         {
+            "includeAll" : true,
+            "refresh_on_load" : false,
+            "query" : "netapp.perf.$Group.$Cluster.node.*",
+            "name" : "Node",
+            "datasource" : null,
+            "allFormat" : "wildcard",
+            "refresh" : 1,
+            "hide" : 0,
+            "type" : "query",
+            "multi" : true,
+            "multiFormat" : "glob"
+         },
+         {
+            "includeAll" : true,
+            "refresh_on_load" : false,
+            "query" : "netapp.perf.$Group.$Cluster.node.$Node.aggr.*",
+            "name" : "Aggregate",
+            "datasource" : null,
+            "allFormat" : "wildcard",
+            "refresh" : 1,
+            "regex" : "/[0-9]/",
+            "hide" : 0,
+            "type" : "query",
+            "multi" : true,
+            "multiFormat" : "glob"
+         },
+         {
+            "includeAll" : false,
+            "options" : [
+               {
+                  "value" : "1",
+                  "text" : "1",
+                  "selected" : false
+               },
+               {
+                  "value" : "2",
+                  "text" : "2",
+                  "selected" : false
+               },
+               {
+                  "value" : "3",
+                  "text" : "3",
+                  "selected" : false
+               },
+               {
+                  "value" : "4",
+                  "text" : "4",
+                  "selected" : false
+               },
+               {
+                  "value" : "5",
+                  "text" : "5",
+                  "selected" : true
+               },
+               {
+                  "value" : "6",
+                  "text" : "6",
+                  "selected" : false
+               },
+               {
+                  "value" : "8",
+                  "text" : "8",
+                  "selected" : false
+               },
+               {
+                  "value" : "10",
+                  "text" : "10",
+                  "selected" : false
+               },
+               {
+                  "value" : "15",
+                  "text" : "15",
+                  "selected" : false
+               },
+               {
+                  "value" : "20",
+                  "text" : "20",
+                  "selected" : false
+               },
+               {
+                  "value" : "40",
+                  "text" : "40",
+                  "selected" : false
+               }
+            ],
+            "refresh_on_load" : false,
+            "query" : "1,2,3,4,5,6,8,10,15,20,40",
+            "name" : "TopResources",
+            "datasource" : null,
+            "allFormat" : "glob",
+            "refresh" : 0,
+            "hide" : 0,
+            "current" : {
+               "value" : "5",
+               "text" : "5",
+               "selected" : true
+            },
+            "type" : "custom"
+         }
+      ]
+   },
+   "annotations" : {
+      "enable" : false,
+      "list" : []
+   },
+   "tags" : [
+      "NetAppHarvest"
+   ],
+   "schemaVersion" : 12,
+   "gnetId" : null,
+   "editable" : true,
+   "title" : "NetApp Detail: Disk and Cache Layers",
+   "sharedCrosshair" : true
+}

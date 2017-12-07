@@ -1,0 +1,2761 @@
+{
+   "time" : {
+      "to" : "now",
+      "from" : "now-6h"
+   },
+   "rows" : [
+      {
+         "panels" : [
+            {
+               "maxDataPoints" : "",
+               "valueFontSize" : "80%",
+               "postfix" : " sessions",
+               "sparkline" : {
+                  "fillColor" : "rgba(31, 118, 189, 0.18)",
+                  "show" : true,
+                  "lineColor" : "rgb(31, 120, 193)",
+                  "full" : false
+               },
+               "id" : 12,
+               "links" : [],
+               "mappingTypes" : [
+                  {
+                     "value" : 1,
+                     "name" : "value to text"
+                  },
+                  {
+                     "value" : 2,
+                     "name" : "range to text"
+                  }
+               ],
+               "rangeMaps" : [
+                  {
+                     "to" : "null",
+                     "text" : "N/A",
+                     "from" : "null"
+                  }
+               ],
+               "prefixFontSize" : "50%",
+               "interval" : null,
+               "type" : "singlestat",
+               "title" : "Sessions Active",
+               "span" : 2,
+               "valueName" : "avg",
+               "colorBackground" : false,
+               "thresholds" : "",
+               "colors" : [
+                  "rgba(71, 212, 59, 0.4)",
+                  "rgba(245, 150, 40, 0.73)",
+                  "rgba(225, 40, 40, 0.59)"
+               ],
+               "valueMaps" : [
+                  {
+                     "value" : "null",
+                     "text" : "N/A",
+                     "op" : "="
+                  }
+               ],
+               "error" : false,
+               "postfixFontSize" : "50%",
+               "decimals" : 0,
+               "targets" : [
+                  {
+                     "target" : "sumSeries(highestAverage(netapp.perf7.$Group.$Node.cifs.curr_sess_cnt, $TopResources))",
+                     "refId" : "A"
+                  }
+               ],
+               "cacheTimeout" : null,
+               "datasource" : null,
+               "mappingType" : 1,
+               "gauge" : {
+                  "show" : false,
+                  "minValue" : 0,
+                  "thresholdMarkers" : true,
+                  "thresholdLabels" : false,
+                  "maxValue" : 100
+               },
+               "format" : "none",
+               "editable" : true,
+               "nullText" : null,
+               "colorValue" : false,
+               "nullPointMode" : "connected",
+               "prefix" : ""
+            },
+            {
+               "maxDataPoints" : 100,
+               "valueFontSize" : "80%",
+               "postfix" : " ms",
+               "sparkline" : {
+                  "fillColor" : "rgba(31, 118, 189, 0.18)",
+                  "show" : true,
+                  "lineColor" : "rgb(31, 120, 193)",
+                  "full" : false
+               },
+               "id" : 15,
+               "links" : [],
+               "mappingTypes" : [
+                  {
+                     "value" : 1,
+                     "name" : "value to text"
+                  },
+                  {
+                     "value" : 2,
+                     "name" : "range to text"
+                  }
+               ],
+               "rangeMaps" : [
+                  {
+                     "to" : "null",
+                     "text" : "N/A",
+                     "from" : "null"
+                  }
+               ],
+               "prefixFontSize" : "50%",
+               "interval" : null,
+               "type" : "singlestat",
+               "title" : "Average Virus Scan Latency",
+               "span" : 2,
+               "valueName" : "avg",
+               "colorBackground" : true,
+               "thresholds" : "250,400",
+               "colors" : [
+                  "rgba(71, 212, 59, 0.4)",
+                  "rgba(245, 150, 40, 0.73)",
+                  "rgba(225, 40, 40, 0.59)"
+               ],
+               "valueMaps" : [
+                  {
+                     "value" : "null",
+                     "text" : "N/A",
+                     "op" : "="
+                  }
+               ],
+               "error" : false,
+               "postfixFontSize" : "50%",
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "highestAverage(netapp.perf7.$Group.$Node.cifs.vscan.$vFiler.scantime_avg_latency, $TopResources)",
+                     "refId" : "A"
+                  }
+               ],
+               "cacheTimeout" : null,
+               "datasource" : null,
+               "mappingType" : 1,
+               "gauge" : {
+                  "show" : false,
+                  "minValue" : 0,
+                  "thresholdMarkers" : true,
+                  "thresholdLabels" : false,
+                  "maxValue" : 100
+               },
+               "format" : "none",
+               "editable" : true,
+               "nullText" : null,
+               "colorValue" : false,
+               "nullPointMode" : "connected",
+               "prefix" : ""
+            },
+            {
+               "valueName" : "avg",
+               "maxDataPoints" : 100,
+               "colorBackground" : false,
+               "thresholds" : "",
+               "valueFontSize" : "80%",
+               "colors" : [
+                  "rgba(71, 212, 59, 0.4)",
+                  "rgba(245, 150, 40, 0.73)",
+                  "rgba(225, 40, 40, 0.59)"
+               ],
+               "postfix" : " /s",
+               "valueMaps" : [
+                  {
+                     "value" : "null",
+                     "text" : "N/A",
+                     "op" : "="
+                  }
+               ],
+               "error" : false,
+               "sparkline" : {
+                  "fillColor" : "rgba(31, 118, 189, 0.18)",
+                  "show" : true,
+                  "lineColor" : "rgb(31, 120, 193)",
+                  "full" : false
+               },
+               "id" : 14,
+               "postfixFontSize" : "50%",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "averageSeries(highestAverage(netapp.perf7.$Group.$Node.cifs.vscan.$vFiler.scanrequests_completed, $TopResources))",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "mappingTypes" : [
+                  {
+                     "value" : 1,
+                     "name" : "value to text"
+                  },
+                  {
+                     "value" : 2,
+                     "name" : "range to text"
+                  }
+               ],
+               "cacheTimeout" : null,
+               "rangeMaps" : [
+                  {
+                     "to" : "null",
+                     "text" : "N/A",
+                     "from" : "null"
+                  }
+               ],
+               "prefixFontSize" : "50%",
+               "datasource" : null,
+               "interval" : null,
+               "mappingType" : 1,
+               "gauge" : {
+                  "show" : false,
+                  "minValue" : 0,
+                  "thresholdMarkers" : true,
+                  "thresholdLabels" : false,
+                  "maxValue" : 100
+               },
+               "format" : "none",
+               "nullText" : null,
+               "editable" : true,
+               "type" : "singlestat",
+               "title" : "Virus Scans Per Second",
+               "span" : 2,
+               "colorValue" : false,
+               "prefix" : "",
+               "nullPointMode" : "connected"
+            },
+            {
+               "maxDataPoints" : 100,
+               "valueFontSize" : "80%",
+               "postfix" : " ms",
+               "sparkline" : {
+                  "fillColor" : "rgba(31, 118, 189, 0.18)",
+                  "show" : true,
+                  "lineColor" : "rgb(31, 120, 193)",
+                  "full" : false
+               },
+               "id" : 13,
+               "links" : [],
+               "mappingTypes" : [
+                  {
+                     "value" : 1,
+                     "name" : "value to text"
+                  },
+                  {
+                     "value" : 2,
+                     "name" : "range to text"
+                  }
+               ],
+               "rangeMaps" : [
+                  {
+                     "to" : "null",
+                     "text" : "N/A",
+                     "from" : "null"
+                  }
+               ],
+               "prefixFontSize" : "50%",
+               "interval" : null,
+               "type" : "singlestat",
+               "title" : "Average AD Auth Latency",
+               "span" : 3,
+               "valueName" : "avg",
+               "colorBackground" : true,
+               "thresholds" : "10,20",
+               "colors" : [
+                  "rgba(71, 212, 59, 0.4)",
+                  "rgba(245, 150, 40, 0.73)",
+                  "rgba(225, 40, 40, 0.59)"
+               ],
+               "valueMaps" : [
+                  {
+                     "value" : "null",
+                     "text" : "N/A",
+                     "op" : "="
+                  }
+               ],
+               "error" : false,
+               "postfixFontSize" : "50%",
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "averageSeries(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.*_latency, $TopResources))",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "cacheTimeout" : null,
+               "datasource" : null,
+               "mappingType" : 1,
+               "gauge" : {
+                  "show" : false,
+                  "minValue" : 0,
+                  "thresholdMarkers" : true,
+                  "thresholdLabels" : false,
+                  "maxValue" : 100
+               },
+               "format" : "none",
+               "editable" : true,
+               "nullText" : null,
+               "colorValue" : false,
+               "nullPointMode" : "connected",
+               "prefix" : ""
+            },
+            {
+               "valueName" : "max",
+               "maxDataPoints" : 100,
+               "colorBackground" : false,
+               "thresholds" : "",
+               "valueFontSize" : "80%",
+               "colors" : [
+                  "rgba(225, 40, 40, 0.59)",
+                  "rgba(245, 150, 40, 0.73)",
+                  "rgba(71, 212, 59, 0.4)"
+               ],
+               "postfix" : "",
+               "valueMaps" : [
+                  {
+                     "value" : "null",
+                     "text" : "N/A",
+                     "op" : "="
+                  }
+               ],
+               "error" : false,
+               "sparkline" : {
+                  "fillColor" : "rgba(31, 118, 189, 0.18)",
+                  "show" : true,
+                  "lineColor" : "rgb(31, 120, 193)",
+                  "full" : false
+               },
+               "id" : 33,
+               "postfixFontSize" : "50%",
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "averageSeries(highestAverage(netapp.perf7.$Group.$Node.cifs.curr_mem_ctrl_blk_cnt, $TopResources))",
+                     "refId" : "A"
+                  }
+               ],
+               "mappingTypes" : [
+                  {
+                     "value" : 1,
+                     "name" : "value to text"
+                  },
+                  {
+                     "value" : 2,
+                     "name" : "range to text"
+                  }
+               ],
+               "cacheTimeout" : null,
+               "rangeMaps" : [
+                  {
+                     "to" : "null",
+                     "text" : "N/A",
+                     "from" : "null"
+                  }
+               ],
+               "prefixFontSize" : "50%",
+               "datasource" : null,
+               "interval" : null,
+               "mappingType" : 1,
+               "gauge" : {
+                  "show" : false,
+                  "minValue" : 0,
+                  "thresholdMarkers" : true,
+                  "thresholdLabels" : false,
+                  "maxValue" : 100
+               },
+               "format" : "none",
+               "nullText" : null,
+               "editable" : true,
+               "type" : "singlestat",
+               "title" : "Available pBlks",
+               "span" : 3,
+               "colorValue" : false,
+               "prefix" : "",
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : false,
+         "title" : "Windows File Services Highlights",
+         "height" : "100px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 20,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Per Node Session Count",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 0,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.curr_sess_cnt, $TopResources), 3)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "Session Count",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 34,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Per vFiler Session Count",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 0,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.curr_sess_cnt, $TopResources), 3, 6)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "Session Count",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Sessions Drilldown",
+         "height" : "302px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 38,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "LSA (SID to Name) Latency",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.lsa_latency, $TopResources), 3, 6)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 39,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "SAMR (Group Membership) Latency",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.samr_latency, $TopResources), 3, 6)",
+                     "textEditor" : true,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 40,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Netlogon (NTLM) Latency",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.netlogon_latency, $TopResources), 3, 6)",
+                     "textEditor" : true,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 42,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "LSA (SID to Name) Requests per Second",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.lsa_latency_base, $TopResources), 3, 6)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "Requests/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 43,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "SAMR (Group Membership) Requests per Second",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.samr_latency_base, $TopResources), 3, 6)",
+                     "textEditor" : true,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "Requests/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 44,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Netlogon (NTLM) Requests per Second",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.netlogon_latency_base, $TopResources), 3, 6)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "Requests/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Windows Authentication Global Drilldown",
+         "height" : "302px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 6,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "LSA (SID to Name) Latency",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.*.lsa_latency, $TopResources), 3, 6, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 16,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "SAMR (Group Membership) Latency",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.*.samr_latency, $TopResources), 3, 6, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 17,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Netlogon (NTLM) Latency",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.*.netlogon_latency, $TopResources), 3, 6, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 37,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "LSA (SID to Name) Requests per Second",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.*.lsa_latency_base, $TopResources), 3, 6,7)",
+                     "textEditor" : true,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "Requests/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 36,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "SAMR (Group Membership) Requests per Second",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.*.samr_latency_base, $TopResources), 3, 6, 7)",
+                     "textEditor" : true,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "Requests/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 35,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Netlogon (NTLM) Requests per Second",
+               "span" : 4,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth.$vFiler.*.netlogon_latency_base, $TopResources), 3, 6, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "Requests/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Windows Authentication Per Server Drilldown",
+         "height" : "302px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 25,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Average Scanner Response Time (Ack + Scan)",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.vscan.$vFiler.scantime_avg_latency, $TopResources), 3, 6)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 28,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Total Scan Requests Completed Per Second",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.vscan.$vFiler.scanrequests_completed, $TopResources), 3, 6)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "File Scans / sec",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 30,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Total Scan Requests Active",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.vscan.$vFiler.scanrequests_current, $TopResources), 3, 6)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "File Scans",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 31,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Total Scan Requests Throttled",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.vscan.$vFiler.scanrequests_throttled_current, $TopResources), 3, 6)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "File Scans",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Virus Scanning Global Drilldown",
+         "height" : "302px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 27,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : true,
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Per Scanner Response Time (Ack + Scan)",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.vscan.$vFiler.*.vscan_server_latency, $TopResources), 3, 6, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 26,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Per Scanner Response Time (Ack only)",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.vscan.$vFiler.*.vscan_ops_server_latency, $TopResources), 3, 6, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 29,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Per Scanner Requests Completed Per Second",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.vscan.$vFiler.*.scancompletions_from_server_rate, $TopResources), 3, 6, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "File Scans / sec",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 32,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Per Scanner Requests Active",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.vscan.$vFiler.*.scanrequests_current_server, $TopResources), 3, 6,7)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "File Scans",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Virus Scanning Per Server Drilldown",
+         "height" : "302px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 1,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Queue Length for Windows AD Authentication",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.auth_qlength, $TopResources), 3)",
+                     "textEditor" : true,
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 18,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Queue Length for VSCAN or Fpolicy",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf7.$Group.$Node.cifs.offload_qlength, $TopResources), 3)",
+                     "textEditor" : true,
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 21,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Available Control Blocks",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(lowestAverage(netapp.perf7.$Group.$Node.cifs.curr_mem_ctrl_blk_cnt, $TopResources), 3)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 24,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "rightSide" : false,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 5,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Exhaust Control Blocks",
+               "span" : 6,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "individual",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "error" : false,
+               "targets" : [
+                  {
+                     "target" : "groupByNode(lowestAverage(netapp.perf7.$Group.$Node.cifs.{exhaust_mem_ctrl_blk_cnt,exhaust_mem_ctrl_blk_reserve_cnt}, $TopResources), 3, 'sum')",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)"
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "Control Blocks (pBLKs) Drilldown",
+         "height" : "302px",
+         "showTitle" : true
+      }
+   ],
+   "timepicker" : {
+      "enable" : true,
+      "status" : "Stable",
+      "refresh_intervals" : [
+         "1m",
+         "5m",
+         "15m",
+         "30m",
+         "1h",
+         "2h",
+         "1d"
+      ],
+      "time_options" : [
+         "15m",
+         "1h",
+         "6h",
+         "12h",
+         "24h",
+         "2d",
+         "7d",
+         "30d",
+         "180d",
+         "1y",
+         "2y"
+      ],
+      "notice" : false,
+      "now" : true,
+      "collapse" : false,
+      "type" : "timepicker"
+   },
+   "refresh" : false,
+   "hideControls" : false,
+   "id" : 11,
+   "links" : [
+      {
+         "icon" : "external link",
+         "includeVars" : true,
+         "type" : "dashboards",
+         "title" : "Related Dashboards",
+         "keepTime" : true,
+         "tags" : [
+            "NetAppHarvest-7"
+         ],
+         "asDropdown" : true
+      }
+   ],
+   "timezone" : "browser",
+   "version" : 5,
+   "style" : "dark",
+   "templating" : {
+      "enable" : true,
+      "list" : [
+         {
+            "includeAll" : false,
+            "refresh_on_load" : false,
+            "query" : "netapp.perf7.*",
+            "name" : "Group",
+            "datasource" : null,
+            "allFormat" : "glob",
+            "refresh" : 1,
+            "regex" : "",
+            "hide" : 0,
+            "type" : "query"
+         },
+         {
+            "includeAll" : true,
+            "refresh_on_load" : false,
+            "query" : "netapp.perf7.$Group.*",
+            "name" : "Node",
+            "datasource" : null,
+            "allFormat" : "wildcard",
+            "refresh" : 1,
+            "hide" : 0,
+            "type" : "query",
+            "multi" : true,
+            "multiFormat" : "glob"
+         },
+         {
+            "includeAll" : true,
+            "refresh_on_load" : false,
+            "query" : "netapp.perf7.$Group.$Node.cifs.auth.*",
+            "name" : "vFiler",
+            "datasource" : null,
+            "allFormat" : "wildcard",
+            "refresh" : 1,
+            "hide" : 0,
+            "type" : "query",
+            "multi" : true,
+            "multiFormat" : "glob"
+         },
+         {
+            "includeAll" : false,
+            "options" : [
+               {
+                  "value" : "1",
+                  "text" : "1",
+                  "selected" : false
+               },
+               {
+                  "value" : "2",
+                  "text" : "2",
+                  "selected" : false
+               },
+               {
+                  "value" : "3",
+                  "text" : "3",
+                  "selected" : false
+               },
+               {
+                  "value" : "4",
+                  "text" : "4",
+                  "selected" : false
+               },
+               {
+                  "value" : "5",
+                  "text" : "5",
+                  "selected" : true
+               },
+               {
+                  "value" : "6",
+                  "text" : "6",
+                  "selected" : false
+               },
+               {
+                  "value" : "8",
+                  "text" : "8",
+                  "selected" : false
+               },
+               {
+                  "value" : "10",
+                  "text" : "10",
+                  "selected" : false
+               },
+               {
+                  "value" : "15",
+                  "text" : "15",
+                  "selected" : false
+               },
+               {
+                  "value" : "20",
+                  "text" : "20",
+                  "selected" : false
+               },
+               {
+                  "value" : "40",
+                  "text" : "40",
+                  "selected" : false
+               }
+            ],
+            "refresh_on_load" : false,
+            "query" : "1,2,3,4,5,6,8,10,15,20,40",
+            "name" : "TopResources",
+            "datasource" : null,
+            "allFormat" : "glob",
+            "refresh" : 0,
+            "hide" : 0,
+            "current" : {
+               "value" : "5",
+               "text" : "5",
+               "selected" : true
+            },
+            "type" : "custom"
+         }
+      ]
+   },
+   "annotations" : {
+      "enable" : false,
+      "list" : []
+   },
+   "tags" : [
+      "NetAppHarvest-7"
+   ],
+   "schemaVersion" : 12,
+   "gnetId" : null,
+   "editable" : true,
+   "title" : "NetApp Detail: 7-Mode Windows File Services",
+   "sharedCrosshair" : true
+}

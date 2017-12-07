@@ -1,0 +1,2259 @@
+{
+   "time" : {
+      "to" : "now",
+      "now" : true,
+      "from" : "now-6h"
+   },
+   "rows" : [
+      {
+         "panels" : [
+            {
+               "maxDataPoints" : 100,
+               "valueFontSize" : "80%",
+               "postfix" : " MB/s",
+               "sparkline" : {
+                  "fillColor" : "rgba(31, 118, 189, 0.18)",
+                  "show" : true,
+                  "lineColor" : "rgb(31, 120, 193)",
+                  "full" : false
+               },
+               "id" : 7,
+               "links" : [],
+               "mappingTypes" : [
+                  {
+                     "value" : 1,
+                     "name" : "value to text"
+                  },
+                  {
+                     "value" : 2,
+                     "name" : "range to text"
+                  }
+               ],
+               "rangeMaps" : [
+                  {
+                     "to" : "null",
+                     "text" : "N/A",
+                     "from" : "null"
+                  }
+               ],
+               "prefixFontSize" : "50%",
+               "interval" : null,
+               "type" : "singlestat",
+               "title" : "NAS, SnapMirror, Cluster Send Throughput",
+               "span" : 2,
+               "valueName" : "avg",
+               "colorBackground" : false,
+               "thresholds" : "",
+               "colors" : [
+                  "rgba(245, 54, 54, 0.9)",
+                  "rgba(237, 129, 40, 0.89)",
+                  "rgba(50, 172, 45, 0.97)"
+               ],
+               "valueMaps" : [
+                  {
+                     "value" : "null",
+                     "text" : "N/A",
+                     "op" : "="
+                  }
+               ],
+               "error" : false,
+               "postfixFontSize" : "50%",
+               "decimals" : 0,
+               "targets" : [
+                  {
+                     "target" : "sumSeries(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.lif.$LIF.sent_data, $TopResources))",
+                     "refId" : "A"
+                  }
+               ],
+               "cacheTimeout" : null,
+               "height" : "120px",
+               "datasource" : null,
+               "mappingType" : 1,
+               "gauge" : {
+                  "show" : false,
+                  "minValue" : 0,
+                  "thresholdMarkers" : true,
+                  "thresholdLabels" : false,
+                  "maxValue" : 100
+               },
+               "format" : "none",
+               "editable" : true,
+               "nullText" : null,
+               "colorValue" : false,
+               "nullPointMode" : "connected",
+               "prefix" : ""
+            },
+            {
+               "maxDataPoints" : 100,
+               "valueFontSize" : "80%",
+               "postfix" : " MB/s",
+               "sparkline" : {
+                  "fillColor" : "rgba(31, 118, 189, 0.18)",
+                  "show" : true,
+                  "lineColor" : "rgb(31, 120, 193)",
+                  "full" : false
+               },
+               "id" : 16,
+               "links" : [],
+               "mappingTypes" : [
+                  {
+                     "value" : 1,
+                     "name" : "value to text"
+                  },
+                  {
+                     "value" : 2,
+                     "name" : "range to text"
+                  }
+               ],
+               "rangeMaps" : [
+                  {
+                     "to" : "null",
+                     "text" : "N/A",
+                     "from" : "null"
+                  }
+               ],
+               "prefixFontSize" : "50%",
+               "interval" : null,
+               "type" : "singlestat",
+               "title" : "NAS, SnapMirror, Cluster Receive Throughput",
+               "span" : 2,
+               "valueName" : "avg",
+               "colorBackground" : false,
+               "thresholds" : "",
+               "colors" : [
+                  "rgba(245, 54, 54, 0.9)",
+                  "rgba(237, 129, 40, 0.89)",
+                  "rgba(50, 172, 45, 0.97)"
+               ],
+               "valueMaps" : [
+                  {
+                     "value" : "null",
+                     "text" : "N/A",
+                     "op" : "="
+                  }
+               ],
+               "error" : false,
+               "postfixFontSize" : "50%",
+               "decimals" : 0,
+               "targets" : [
+                  {
+                     "target" : "sumSeries(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.lif.$LIF.recv_data, $TopResources))",
+                     "refId" : "A"
+                  }
+               ],
+               "cacheTimeout" : null,
+               "height" : "120px",
+               "datasource" : null,
+               "mappingType" : 1,
+               "gauge" : {
+                  "show" : false,
+                  "minValue" : 0,
+                  "thresholdMarkers" : true,
+                  "thresholdLabels" : false,
+                  "maxValue" : 100
+               },
+               "format" : "none",
+               "editable" : true,
+               "nullText" : null,
+               "colorValue" : false,
+               "nullPointMode" : "connected",
+               "prefix" : ""
+            },
+            {
+               "maxDataPoints" : 100,
+               "valueFontSize" : "80%",
+               "postfix" : " MB/s",
+               "sparkline" : {
+                  "fillColor" : "rgba(31, 118, 189, 0.18)",
+                  "show" : true,
+                  "lineColor" : "rgb(31, 120, 193)",
+                  "full" : false
+               },
+               "id" : 17,
+               "links" : [],
+               "mappingTypes" : [
+                  {
+                     "value" : 1,
+                     "name" : "value to text"
+                  },
+                  {
+                     "value" : 2,
+                     "name" : "range to text"
+                  }
+               ],
+               "rangeMaps" : [
+                  {
+                     "to" : "null",
+                     "text" : "N/A",
+                     "from" : "null"
+                  }
+               ],
+               "prefixFontSize" : "50%",
+               "interval" : null,
+               "type" : "singlestat",
+               "title" : "iSCSI Send Throughput",
+               "span" : 2,
+               "valueName" : "avg",
+               "colorBackground" : false,
+               "thresholds" : "",
+               "colors" : [
+                  "rgba(245, 54, 54, 0.9)",
+                  "rgba(237, 129, 40, 0.89)",
+                  "rgba(50, 172, 45, 0.97)"
+               ],
+               "valueMaps" : [
+                  {
+                     "value" : "null",
+                     "text" : "N/A",
+                     "op" : "="
+                  }
+               ],
+               "error" : false,
+               "postfixFontSize" : "50%",
+               "decimals" : 0,
+               "targets" : [
+                  {
+                     "target" : "sumSeries(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.iscsi_lif.$LIF.read_data, $TopResources))",
+                     "refId" : "A"
+                  }
+               ],
+               "cacheTimeout" : null,
+               "datasource" : null,
+               "mappingType" : 1,
+               "gauge" : {
+                  "show" : false,
+                  "minValue" : 0,
+                  "thresholdMarkers" : true,
+                  "thresholdLabels" : false,
+                  "maxValue" : 100
+               },
+               "format" : "none",
+               "editable" : true,
+               "nullText" : null,
+               "colorValue" : false,
+               "nullPointMode" : "connected",
+               "prefix" : ""
+            },
+            {
+               "maxDataPoints" : 100,
+               "valueFontSize" : "80%",
+               "postfix" : " MB/s",
+               "sparkline" : {
+                  "fillColor" : "rgba(31, 118, 189, 0.18)",
+                  "show" : true,
+                  "lineColor" : "rgb(31, 120, 193)",
+                  "full" : false
+               },
+               "id" : 18,
+               "links" : [],
+               "mappingTypes" : [
+                  {
+                     "value" : 1,
+                     "name" : "value to text"
+                  },
+                  {
+                     "value" : 2,
+                     "name" : "range to text"
+                  }
+               ],
+               "rangeMaps" : [
+                  {
+                     "to" : "null",
+                     "text" : "N/A",
+                     "from" : "null"
+                  }
+               ],
+               "prefixFontSize" : "50%",
+               "interval" : null,
+               "type" : "singlestat",
+               "title" : "iSCSI Receive Throughput",
+               "span" : 2,
+               "valueName" : "avg",
+               "colorBackground" : false,
+               "thresholds" : "",
+               "colors" : [
+                  "rgba(245, 54, 54, 0.9)",
+                  "rgba(237, 129, 40, 0.89)",
+                  "rgba(50, 172, 45, 0.97)"
+               ],
+               "valueMaps" : [
+                  {
+                     "value" : "null",
+                     "text" : "N/A",
+                     "op" : "="
+                  }
+               ],
+               "error" : false,
+               "postfixFontSize" : "50%",
+               "decimals" : 0,
+               "targets" : [
+                  {
+                     "target" : "sumSeries(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.iscsi_lif.$LIF.write_data, $TopResources))",
+                     "refId" : "A"
+                  }
+               ],
+               "cacheTimeout" : null,
+               "datasource" : null,
+               "mappingType" : 1,
+               "gauge" : {
+                  "show" : false,
+                  "minValue" : 0,
+                  "thresholdMarkers" : true,
+                  "thresholdLabels" : false,
+                  "maxValue" : 100
+               },
+               "format" : "none",
+               "editable" : true,
+               "nullText" : null,
+               "colorValue" : false,
+               "nullPointMode" : "connected",
+               "prefix" : ""
+            },
+            {
+               "maxDataPoints" : 100,
+               "valueFontSize" : "80%",
+               "postfix" : " MB/s",
+               "sparkline" : {
+                  "fillColor" : "rgba(31, 118, 189, 0.18)",
+                  "show" : true,
+                  "lineColor" : "rgb(31, 120, 193)",
+                  "full" : false
+               },
+               "id" : 19,
+               "links" : [],
+               "mappingTypes" : [
+                  {
+                     "value" : 1,
+                     "name" : "value to text"
+                  },
+                  {
+                     "value" : 2,
+                     "name" : "range to text"
+                  }
+               ],
+               "rangeMaps" : [
+                  {
+                     "to" : "null",
+                     "text" : "N/A",
+                     "from" : "null"
+                  }
+               ],
+               "prefixFontSize" : "50%",
+               "interval" : null,
+               "type" : "singlestat",
+               "title" : "FCP Send Throughput",
+               "span" : 2,
+               "valueName" : "avg",
+               "colorBackground" : false,
+               "thresholds" : "",
+               "colors" : [
+                  "rgba(245, 54, 54, 0.9)",
+                  "rgba(237, 129, 40, 0.89)",
+                  "rgba(50, 172, 45, 0.97)"
+               ],
+               "valueMaps" : [
+                  {
+                     "value" : "null",
+                     "text" : "N/A",
+                     "op" : "="
+                  }
+               ],
+               "error" : false,
+               "postfixFontSize" : "50%",
+               "decimals" : 0,
+               "targets" : [
+                  {
+                     "target" : "sumSeries(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.fcp_lif.$LIF.read_data, $TopResources))",
+                     "refId" : "A"
+                  }
+               ],
+               "cacheTimeout" : null,
+               "datasource" : null,
+               "mappingType" : 1,
+               "gauge" : {
+                  "show" : false,
+                  "minValue" : 0,
+                  "thresholdMarkers" : true,
+                  "thresholdLabels" : false,
+                  "maxValue" : 100
+               },
+               "format" : "none",
+               "editable" : true,
+               "nullText" : null,
+               "colorValue" : false,
+               "nullPointMode" : "connected",
+               "prefix" : ""
+            },
+            {
+               "maxDataPoints" : 100,
+               "valueFontSize" : "80%",
+               "postfix" : " MB/s",
+               "sparkline" : {
+                  "fillColor" : "rgba(31, 118, 189, 0.18)",
+                  "show" : true,
+                  "lineColor" : "rgb(31, 120, 193)",
+                  "full" : false
+               },
+               "id" : 20,
+               "links" : [],
+               "mappingTypes" : [
+                  {
+                     "value" : 1,
+                     "name" : "value to text"
+                  },
+                  {
+                     "value" : 2,
+                     "name" : "range to text"
+                  }
+               ],
+               "rangeMaps" : [
+                  {
+                     "to" : "null",
+                     "text" : "N/A",
+                     "from" : "null"
+                  }
+               ],
+               "prefixFontSize" : "50%",
+               "interval" : null,
+               "type" : "singlestat",
+               "title" : "FCP Receive Throughput",
+               "span" : 2,
+               "valueName" : "avg",
+               "colorBackground" : false,
+               "thresholds" : "",
+               "colors" : [
+                  "rgba(245, 54, 54, 0.9)",
+                  "rgba(237, 129, 40, 0.89)",
+                  "rgba(50, 172, 45, 0.97)"
+               ],
+               "valueMaps" : [
+                  {
+                     "value" : "null",
+                     "text" : "N/A",
+                     "op" : "="
+                  }
+               ],
+               "error" : false,
+               "postfixFontSize" : "50%",
+               "decimals" : 0,
+               "targets" : [
+                  {
+                     "target" : "sumSeries(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.fcp_lif.$LIF.write_data, $TopResources))",
+                     "refId" : "A"
+                  }
+               ],
+               "cacheTimeout" : null,
+               "datasource" : null,
+               "mappingType" : 1,
+               "gauge" : {
+                  "show" : false,
+                  "minValue" : 0,
+                  "thresholdMarkers" : true,
+                  "thresholdLabels" : false,
+                  "maxValue" : 100
+               },
+               "format" : "none",
+               "editable" : true,
+               "nullText" : null,
+               "colorValue" : false,
+               "nullPointMode" : "connected",
+               "prefix" : ""
+            }
+         ],
+         "editable" : true,
+         "collapse" : false,
+         "title" : "Highlights",
+         "height" : 155.4375,
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "scroll" : false,
+               "maxDataPoints" : "auto",
+               "error" : false,
+               "id" : 27,
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.lif.$LIF.sent_data, $TopResources), 3, 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "transform" : "timeseries_aggregations",
+               "fontSize" : "90%",
+               "styles" : [
+                  {
+                     "pattern" : "Time",
+                     "type" : "date",
+                     "dateFormat" : "YYYY-MM-DD HH:mm:ss"
+                  },
+                  {
+                     "colorMode" : null,
+                     "unit" : "MBs",
+                     "pattern" : "/.*/",
+                     "type" : "number",
+                     "thresholds" : [
+                        ""
+                     ],
+                     "decimals" : 0,
+                     "colors" : [
+                        "rgba(71, 212, 59, 0.4)",
+                        "rgba(245, 150, 40, 0.73)",
+                        "rgba(225, 40, 40, 0.59)"
+                     ]
+                  }
+               ],
+               "isNew" : true,
+               "pageSize" : 6,
+               "showHeader" : true,
+               "sort" : {
+                  "desc" : true,
+                  "col" : 1
+               },
+               "editable" : true,
+               "columns" : [
+                  {
+                     "value" : "avg",
+                     "text" : "Avg"
+                  }
+               ],
+               "type" : "table",
+               "span" : 4,
+               "title" : "NAS, SnapMirror, Cluster Send Throughput"
+            },
+            {
+               "scroll" : false,
+               "maxDataPoints" : "auto",
+               "error" : false,
+               "id" : 29,
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.iscsi_lif.$LIF.read_data, $TopResources), 3, 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "transform" : "timeseries_aggregations",
+               "fontSize" : "90%",
+               "styles" : [
+                  {
+                     "pattern" : "Time",
+                     "type" : "date",
+                     "dateFormat" : "YYYY-MM-DD HH:mm:ss"
+                  },
+                  {
+                     "colorMode" : null,
+                     "unit" : "MBs",
+                     "pattern" : "/.*/",
+                     "type" : "number",
+                     "thresholds" : [
+                        ""
+                     ],
+                     "decimals" : 0,
+                     "colors" : [
+                        "rgba(71, 212, 59, 0.4)",
+                        "rgba(245, 150, 40, 0.73)",
+                        "rgba(225, 40, 40, 0.59)"
+                     ]
+                  }
+               ],
+               "isNew" : true,
+               "pageSize" : 6,
+               "showHeader" : true,
+               "sort" : {
+                  "desc" : true,
+                  "col" : 1
+               },
+               "editable" : true,
+               "columns" : [
+                  {
+                     "value" : "avg",
+                     "text" : "Avg"
+                  }
+               ],
+               "type" : "table",
+               "span" : 4,
+               "title" : "iSCSI Send Throughput"
+            },
+            {
+               "scroll" : false,
+               "maxDataPoints" : "auto",
+               "error" : false,
+               "id" : 31,
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.fcp_lif.$LIF.read_data, $TopResources), 3, 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "transform" : "timeseries_aggregations",
+               "fontSize" : "90%",
+               "styles" : [
+                  {
+                     "pattern" : "Time",
+                     "type" : "date",
+                     "dateFormat" : "YYYY-MM-DD HH:mm:ss"
+                  },
+                  {
+                     "colorMode" : null,
+                     "unit" : "MBs",
+                     "pattern" : "/.*/",
+                     "type" : "number",
+                     "thresholds" : [
+                        ""
+                     ],
+                     "decimals" : 0,
+                     "colors" : [
+                        "rgba(71, 212, 59, 0.4)",
+                        "rgba(245, 150, 40, 0.73)",
+                        "rgba(225, 40, 40, 0.59)"
+                     ]
+                  }
+               ],
+               "isNew" : true,
+               "pageSize" : 6,
+               "showHeader" : true,
+               "sort" : {
+                  "desc" : true,
+                  "col" : 1
+               },
+               "editable" : true,
+               "columns" : [
+                  {
+                     "value" : "avg",
+                     "text" : "Avg"
+                  }
+               ],
+               "type" : "table",
+               "span" : 4,
+               "title" : "FCP Send Throughput"
+            },
+            {
+               "scroll" : false,
+               "maxDataPoints" : "auto",
+               "error" : false,
+               "id" : 28,
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.lif.$LIF.recv_data, $TopResources), 3, 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "transform" : "timeseries_aggregations",
+               "fontSize" : "90%",
+               "styles" : [
+                  {
+                     "pattern" : "Time",
+                     "type" : "date",
+                     "dateFormat" : "YYYY-MM-DD HH:mm:ss"
+                  },
+                  {
+                     "colorMode" : null,
+                     "unit" : "MBs",
+                     "pattern" : "/.*/",
+                     "type" : "number",
+                     "thresholds" : [
+                        ""
+                     ],
+                     "decimals" : 0,
+                     "colors" : [
+                        "rgba(71, 212, 59, 0.4)",
+                        "rgba(245, 150, 40, 0.73)",
+                        "rgba(225, 40, 40, 0.59)"
+                     ]
+                  }
+               ],
+               "isNew" : true,
+               "pageSize" : 6,
+               "showHeader" : true,
+               "sort" : {
+                  "desc" : true,
+                  "col" : 1
+               },
+               "editable" : true,
+               "columns" : [
+                  {
+                     "value" : "avg",
+                     "text" : "Avg"
+                  }
+               ],
+               "type" : "table",
+               "span" : 4,
+               "title" : "NAS, SnapMirror, Cluster Receive Throughput"
+            },
+            {
+               "scroll" : false,
+               "maxDataPoints" : "auto",
+               "error" : false,
+               "id" : 30,
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.iscsi_lif.$LIF.write_data, $TopResources), 3, 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "transform" : "timeseries_aggregations",
+               "fontSize" : "90%",
+               "styles" : [
+                  {
+                     "pattern" : "Time",
+                     "type" : "date",
+                     "dateFormat" : "YYYY-MM-DD HH:mm:ss"
+                  },
+                  {
+                     "colorMode" : null,
+                     "unit" : "MBs",
+                     "pattern" : "/.*/",
+                     "type" : "number",
+                     "thresholds" : [
+                        ""
+                     ],
+                     "decimals" : 0,
+                     "colors" : [
+                        "rgba(71, 212, 59, 0.4)",
+                        "rgba(245, 150, 40, 0.73)",
+                        "rgba(225, 40, 40, 0.59)"
+                     ]
+                  }
+               ],
+               "isNew" : true,
+               "pageSize" : 6,
+               "showHeader" : true,
+               "sort" : {
+                  "desc" : true,
+                  "col" : 1
+               },
+               "editable" : true,
+               "columns" : [
+                  {
+                     "value" : "avg",
+                     "text" : "Avg"
+                  }
+               ],
+               "type" : "table",
+               "span" : 4,
+               "title" : "iSCSI Receive Throughput"
+            },
+            {
+               "scroll" : false,
+               "maxDataPoints" : "auto",
+               "error" : false,
+               "id" : 32,
+               "links" : [],
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.fcp_lif.$LIF.write_data, $TopResources), 3, 5, 7)",
+                     "textEditor" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "transform" : "timeseries_aggregations",
+               "fontSize" : "90%",
+               "styles" : [
+                  {
+                     "pattern" : "Time",
+                     "type" : "date",
+                     "dateFormat" : "YYYY-MM-DD HH:mm:ss"
+                  },
+                  {
+                     "colorMode" : null,
+                     "unit" : "MBs",
+                     "pattern" : "/.*/",
+                     "type" : "number",
+                     "thresholds" : [
+                        ""
+                     ],
+                     "decimals" : 0,
+                     "colors" : [
+                        "rgba(71, 212, 59, 0.4)",
+                        "rgba(245, 150, 40, 0.73)",
+                        "rgba(225, 40, 40, 0.59)"
+                     ]
+                  }
+               ],
+               "isNew" : true,
+               "pageSize" : 6,
+               "showHeader" : true,
+               "sort" : {
+                  "desc" : true,
+                  "col" : 1
+               },
+               "editable" : true,
+               "columns" : [
+                  {
+                     "value" : "avg",
+                     "text" : "Avg"
+                  }
+               ],
+               "type" : "table",
+               "span" : 4,
+               "title" : "FCP Receive Throughput"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "LIF Table Drilldown",
+         "height" : "302px",
+         "showTitle" : true
+      },
+      {
+         "height" : "302px",
+         "showTitle" : true,
+         "notice" : false,
+         "collapsable" : true,
+         "collapse" : true,
+         "editable" : true,
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 6,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : null,
+                  "rightSide" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "sort" : null,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Send Throughput",
+               "span" : 12,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.lif.$LIF.sent_data, $TopResources)), 5, 7)",
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "MB/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 5,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : null,
+                  "rightSide" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "sort" : null,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "Receive Throughput",
+               "span" : 12,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.lif.$LIF.recv_data, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "MB/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "title" : "NAS, SnapMirror, and Cluster LIF Drilldown"
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 9,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : null,
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "sort" : null,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "iSCSI Read IOPs",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "decimals" : null,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.iscsi_lif.$LIF.iscsi_read_ops, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "IOPs",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 14,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : null,
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "sort" : null,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "iSCSI Read Data",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.iscsi_lif.$LIF.read_data, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "MB/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 11,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : null,
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "sort" : null,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "iSCSI Read Latency",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.iscsi_lif.$LIF.avg_read_latency, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 10,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : false,
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "iSCSI Write IOPs",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.iscsi_lif.$LIF.iscsi_write_ops, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "IOPs",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 15,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : null,
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "sort" : null,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "iSCSI Write Data",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.iscsi_lif.$LIF.write_data, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "MB/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 12,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : null,
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "sort" : null,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "iSCSI Write Latency",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.iscsi_lif.$LIF.avg_write_latency, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "iSCSI LIF Drilldown",
+         "height" : "302px",
+         "showTitle" : true
+      },
+      {
+         "panels" : [
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 21,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : null,
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "sort" : null,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "FCP Read IOPs",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.fcp_lif.$LIF.read_ops, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "IOPs",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 22,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : null,
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "sort" : null,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "FCP Read Data",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.fcp_lif.$LIF.read_data, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "MB/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 23,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : null,
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "sort" : null,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "FCP Read Latency",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.fcp_lif.$LIF.avg_read_latency, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 24,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : false,
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "FCP Write IOPs",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : false
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.fcp_lif.$LIF.write_ops, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "IOPs",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 25,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : null,
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "sort" : null,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "FCP Write Data",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.fcp_lif.$LIF.write_data, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "none",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "MB/s",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            },
+            {
+               "timeFrom" : null,
+               "xaxis" : {
+                  "show" : true
+               },
+               "points" : false,
+               "id" : 26,
+               "renderer" : "flot",
+               "links" : [],
+               "stack" : false,
+               "legend" : {
+                  "sortDesc" : null,
+                  "rightSide" : false,
+                  "hideEmpty" : true,
+                  "show" : true,
+                  "min" : false,
+                  "avg" : true,
+                  "max" : true,
+                  "values" : true,
+                  "total" : false,
+                  "sort" : null,
+                  "alignAsTable" : true,
+                  "current" : true
+               },
+               "aliasColors" : {},
+               "percentage" : false,
+               "annotate" : {
+                  "enable" : false
+               },
+               "pointradius" : 2,
+               "timeShift" : null,
+               "seriesOverrides" : [],
+               "scale" : 1,
+               "resolution" : 100,
+               "type" : "graph",
+               "title" : "FCP Write Latency",
+               "span" : 4,
+               "loadingEditor" : false,
+               "bars" : false,
+               "lines" : true,
+               "steppedLine" : false,
+               "tooltip" : {
+                  "value_type" : "cumulative",
+                  "shared" : true,
+                  "query_as_alias" : true,
+                  "sort" : 0,
+                  "msResolution" : true
+               },
+               "fill" : 1,
+               "decimals" : 1,
+               "targets" : [
+                  {
+                     "target" : "aliasByNode(sortByMaxima(highestAverage(netapp.perf.$Group.$Cluster.svm.$SVM.fcp_lif.$LIF.avg_write_latency, $TopResources)), 5, 7)",
+                     "hide" : false,
+                     "refId" : "A"
+                  }
+               ],
+               "yaxes" : [
+                  {
+                     "show" : true,
+                     "format" : "ms",
+                     "min" : 0,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  },
+                  {
+                     "show" : true,
+                     "format" : "short",
+                     "min" : null,
+                     "max" : null,
+                     "label" : "",
+                     "logBase" : 1
+                  }
+               ],
+               "grid" : {
+                  "threshold1" : null,
+                  "min" : 0,
+                  "threshold2Color" : "rgba(234, 112, 112, 0.22)",
+                  "threshold2" : null,
+                  "threshold1Color" : "rgba(216, 200, 27, 0.27)",
+                  "max" : null
+               },
+               "datasource" : null,
+               "zerofill" : true,
+               "linewidth" : 2,
+               "editable" : true,
+               "nullPointMode" : "connected"
+            }
+         ],
+         "editable" : true,
+         "collapse" : true,
+         "title" : "FCP LIF Drilldown",
+         "height" : "302px",
+         "showTitle" : true
+      }
+   ],
+   "timepicker" : {
+      "enable" : true,
+      "status" : "Stable",
+      "refresh_intervals" : [
+         "1m",
+         "5m",
+         "15m",
+         "30m",
+         "1h",
+         "2h",
+         "1d"
+      ],
+      "time_options" : [
+         "15m",
+         "1h",
+         "6h",
+         "12h",
+         "24h",
+         "2d",
+         "7d",
+         "30d",
+         "180d",
+         "1y",
+         "2y"
+      ],
+      "notice" : false,
+      "now" : true,
+      "collapse" : false,
+      "type" : "timepicker"
+   },
+   "refresh" : false,
+   "hideControls" : false,
+   "id" : 17,
+   "links" : [
+      {
+         "icon" : "external link",
+         "includeVars" : true,
+         "type" : "dashboards",
+         "title" : "Related Dashboards",
+         "keepTime" : true,
+         "tags" : [
+            "NetAppHarvest"
+         ],
+         "asDropdown" : true
+      }
+   ],
+   "timezone" : "browser",
+   "version" : 5,
+   "style" : "dark",
+   "templating" : {
+      "enable" : true,
+      "list" : [
+         {
+            "includeAll" : false,
+            "refresh_on_load" : false,
+            "query" : "netapp.perf.*",
+            "name" : "Group",
+            "datasource" : null,
+            "allFormat" : "glob",
+            "refresh" : 1,
+            "hide" : 0,
+            "type" : "query"
+         },
+         {
+            "includeAll" : true,
+            "refresh_on_load" : false,
+            "query" : "netapp.perf.$Group.*",
+            "name" : "Cluster",
+            "datasource" : null,
+            "allFormat" : "wildcard",
+            "refresh" : 1,
+            "hide" : 0,
+            "type" : "query",
+            "multi" : true,
+            "multiFormat" : "glob"
+         },
+         {
+            "includeAll" : true,
+            "refresh_on_load" : false,
+            "query" : "netapp.perf.$Group.$Cluster.svm.*",
+            "name" : "SVM",
+            "datasource" : null,
+            "allFormat" : "wildcard",
+            "refresh" : 1,
+            "hide" : 0,
+            "type" : "query",
+            "multi" : true,
+            "multiFormat" : "glob"
+         },
+         {
+            "includeAll" : true,
+            "refresh_on_load" : false,
+            "query" : "netapp.perf.$Group.$Cluster.svm.$SVM.{iscsi_lif,fcp_lif,lif}.*",
+            "name" : "LIF",
+            "datasource" : null,
+            "allFormat" : "wildcard",
+            "refresh" : 1,
+            "hide" : 0,
+            "type" : "query",
+            "multi" : true,
+            "multiFormat" : "glob"
+         },
+         {
+            "includeAll" : false,
+            "options" : [
+               {
+                  "value" : "1",
+                  "text" : "1",
+                  "selected" : false
+               },
+               {
+                  "value" : "2",
+                  "text" : "2",
+                  "selected" : false
+               },
+               {
+                  "value" : "3",
+                  "text" : "3",
+                  "selected" : false
+               },
+               {
+                  "value" : "4",
+                  "text" : "4",
+                  "selected" : false
+               },
+               {
+                  "value" : "5",
+                  "text" : "5",
+                  "selected" : true
+               },
+               {
+                  "value" : "6",
+                  "text" : "6",
+                  "selected" : false
+               },
+               {
+                  "value" : "8",
+                  "text" : "8",
+                  "selected" : false
+               },
+               {
+                  "value" : "10",
+                  "text" : "10",
+                  "selected" : false
+               },
+               {
+                  "value" : "15",
+                  "text" : "15",
+                  "selected" : false
+               },
+               {
+                  "value" : "20",
+                  "text" : "20",
+                  "selected" : false
+               },
+               {
+                  "value" : "40",
+                  "text" : "40",
+                  "selected" : false
+               }
+            ],
+            "refresh_on_load" : false,
+            "query" : "1,2,3,4,5,6,8,10,15,20,40",
+            "name" : "TopResources",
+            "datasource" : null,
+            "allFormat" : "glob",
+            "refresh" : 0,
+            "hide" : 0,
+            "current" : {
+               "value" : "5",
+               "text" : "5",
+               "selected" : true
+            },
+            "type" : "custom"
+         }
+      ]
+   },
+   "annotations" : {
+      "enable" : false,
+      "list" : []
+   },
+   "tags" : [
+      "NetAppHarvest"
+   ],
+   "schemaVersion" : 12,
+   "gnetId" : null,
+   "editable" : true,
+   "title" : "NetApp Detail: Network LIF",
+   "sharedCrosshair" : true
+}
